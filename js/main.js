@@ -46,9 +46,9 @@ var agregarTema = function (e){
   $.post(api.url, {
     author_name: nombre,
     content : mensaje
-  }, function(){
+  }, function(tema){
     crearPublicaciones(tema);
-    $("#modal-tema").modal("hide");
+    $("#modal-tema").modal("close");
   });
 };
 
