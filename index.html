@@ -14,19 +14,47 @@
 
     <h1>Temas</h1>
     <!-- Modal Trigger -->
-    <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
+    <a class="waves-effect waves-light btn" href="#modal-tema">Modal</a>
+
+    <table class="highlight">
+      <thead>
+        <tr>
+          <th>Tema</th>
+          <th>Respuestas</th>
+        </tr>
+      </thead>
+
+      <tbody id="listaTemas">
+        <tr>
+          <td>Alvin</td>
+          <td>Eclair</td>
+        </tr>
+      </tbody>
+    </table>
 
     <!-- Modal Structure -->
-    <div id="modal1" class="modal">
+    <div id="modal-tema" class="modal">
       <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="input_text" type="text" data-length="10">
+              <label for="input_text">Input text</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+              <label for="textarea1">Textarea</label>
+            </div>
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-primary">+ Agregar</button>
       </div>
     </div>
-
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
