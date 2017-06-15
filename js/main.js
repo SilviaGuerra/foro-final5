@@ -7,6 +7,7 @@ var cargarPagina = function(){
   cargarTemas();
   $("#nuevoTema").submit(agregarTema);
   $(".cancelar").click(cerrarModal);
+  $("#listaTemas").click(mostrarContenido);
 }
 
 var cargarTemas = function (){
@@ -58,7 +59,9 @@ var cerrarModal = function(){
   $(".cancelar").modal('close');
 }
 
-
+var mostrarContenido = function(tema){
+  window.location.href = "verTopic.html";
+}
 
 
 $(document).ready(cargarPagina);
