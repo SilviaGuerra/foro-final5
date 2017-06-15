@@ -5,6 +5,7 @@ var api = {
 var cargarPagina = function(){
   $('.modal').modal();
   cargarTemas();
+  $("#nuevoTema").submit(agregarTema);
 }
 
 var cargarTemas = function (){
@@ -36,7 +37,20 @@ var crearPublicaciones = function (tema){
 
   // //agregamos fila a tabla e imprimimos
   $("#listaTemas").append($fila);
-
 }
+
+var agregarTema = function (e){
+  e.preventDefault();
+  var nombre = $("#autor").val();
+  var mensaje = $("#mensaje").val();
+  $.post(api.url, {
+    author_name: nombre,
+    content : mensaje
+  }, function(){
+    crearPublicaciones(tema);
+    $("#modal-tema").modal("hide");
+  });
+};
+
 
 $(document).ready(cargarPagina);
