@@ -15,16 +15,12 @@
       <nav>
         <div class="nav-wrapper">
           <h1 class="center-align">Foro</h1>
-          <!-- <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html"><i class="material-icons left">search</i>Link with Left Icon</a></li>
-            <li><a href="badges.html"><i class="material-icons right">view_module</i>Link with Right Icon</a></li>
-          </ul> -->
         </div>
       </nav>
     </header>
     <!-- Modal Trigger -->
     <a class="waves-effect waves-light btn purple right" href="#modal-tema"><i class="material-icons">add</i></a>
-
+    <!-- tabla -->
     <table class="highlight">
       <thead>
         <tr>
@@ -33,33 +29,33 @@
           <th>Respuestas</th>
         </tr>
       </thead>
-
-      <tbody id="listaTemas">
-        <tr>
-          <td>Alvin</td>
-          <td>Eclair</td>
-        </tr>
-      </tbody>
+    <!-- aqui se imprimen los nuevos temas -->
+      <tbody id="listaTemas"></tbody>
     </table>
 
-    <!-- Modal Structure -->
+    <!-- Modal nuevo comentario -->
     <div id="modal-tema" class="modal">
       <div class="modal-content">
         <form id="nuevoTema">
           <div class="row">
+            <nav>
+              <div class="nav-wrapper">
+                <p class="center-align">Di algo</p>
+              </div>
+            </nav>
             <div class="input-field col s6">
               <input id="autor" name="autor" type="text" data-length="30">
               <label for="autor">Nombre:</label>
             </div>
           </div>
-          <div class="row">
+          <div>
             <div class="input-field col s12">
               <textarea id="mensaje" name="mensaje" class="materialize-textarea" data-length="80"></textarea>
               <label for="mensaje">Mensaje</label>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-              <button type="submit" class="btn btn-primary">+ Agregar</button>
+              <button type="button" class="btn cancelar" data-dismiss="modal">Cancelar</button>
+              <button type="submit" class="btn">+ Agregar</button>
             </div>
           </div>
         </form>

@@ -6,6 +6,7 @@ var cargarPagina = function(){
   $('.modal').modal();
   cargarTemas();
   $("#nuevoTema").submit(agregarTema);
+  $(".cancelar").click(cerrarModal);
 }
 
 var cargarTemas = function (){
@@ -50,7 +51,14 @@ var agregarTema = function (e){
     crearPublicaciones(tema);
     $("#modal-tema").modal("close");
   });
+
 };
+
+var cerrarModal = function(){
+  $(".cancelar").modal('close');
+}
+
+
 
 
 $(document).ready(cargarPagina);

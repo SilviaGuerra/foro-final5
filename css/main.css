@@ -12,3 +12,12 @@ h1{
 .highlight{
   margin-top: 83px
 }
+
+.input-field{
+  margin-top: 40px;
+}
+
+.modal .modal-footer .btn{
+  margin: 25px 10px;
+  background: purple;
+}
